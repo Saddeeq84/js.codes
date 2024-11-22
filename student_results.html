@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+        <meta name="vieport" content="width=device" scale="0.1">
+        <title>Student results</title>
+    </head>
+    <body>
+        <h1>Student Result</h1>
+        <label for="name">Enter student name</label>
+        <input type="text" id="student">
+        <label for="mark">Enter Marks</label>
+        <input type="number" id="mark">
+        <button onclick="displaystatus()">Display Result</button>
+        <p id="display"></p>
+
+
+        <script>
+            function displaystatus(){
+                mark = (document.getElementById('mark').value);
+            if (mark >= 75 & mark <= 100){ 
+               result = "A";
+            } else if(mark >= 60 & mark <=69 ) {
+               result = "B";
+            }
+            else if(mark >= 40 & mark <=59){
+               result = "C";
+            }
+            else if(mark >= 0 & mark <=39){
+               result = "F";
+            }
+            else{
+               result = "invalid result";
+            }
+            document.getElementById("display").textContent = `Dear ${name},  Your score is: ${result}`;
+            }
+        </script>
+        
+    </body>
+</html>
